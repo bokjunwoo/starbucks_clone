@@ -5,7 +5,6 @@ body {
     font-weight: 400;
     line-height: 1.4;
     font-family: 'Nanum Gothic', sans-serif;
-    height: 3000px;
 }
 
 a {
@@ -18,6 +17,90 @@ a {
     margin: 0 auto;
 
 }
+
+.strong {
+    font-weight: 800;
+}
+
+/* BTN */
+.btn {
+    display: inline-block;
+    padding: 8px 20px;
+    box-sizing: border-box;
+    border: 2px solid currentColor;
+    /* currentColor 부모가 가진 색상을 가져온다 */
+    border-radius: 5px;
+}
+
+.btn--reverse {
+    background-color: #00704a;
+    border-color: #00704a;
+    color: white;
+    transition: 0.4s;
+}
+
+.btn--reverse:hover {
+    text-decoration: underline;
+}
+
+.btn--white {
+    border-color: white;
+    color: white;
+    transition: 0.4s;
+}
+
+.btn--white:hover {
+    text-decoration: underline;
+}
+
+.btn--white_black {
+    border-color: white;
+    color: white;
+    transition: 0.4s;
+}
+
+.btn--white_black:hover {
+    background-color: white;
+    color: #222;
+    text-decoration: underline;
+}
+
+.btn--light_green {
+    border-color: #00704a;
+    color: #00704a;
+    transition: 0.4s;
+}
+
+.btn--light_green:hover {
+    color: white;
+    background-color: #00704a;
+    text-decoration: underline;
+}
+
+.btn--gold {
+    border-color: #b9813e;
+    color: #b9813e;
+    transition: 0.4s;
+}
+
+.btn--gold:hover {
+    background-color: #b9813e;
+    text-decoration: underline;
+    color: white;
+}
+
+.btn--black {
+    border-color: #000;
+    color: #000;
+    transition: 0.4s;
+}
+
+.btn--black:hover {
+    background-color: #000;
+    color: #fff;
+    text-decoration: underline;
+}
+
 /* fonts */
 .material-symbols-outlined {
     font-variation-settings:
@@ -318,4 +401,513 @@ header .badges {
 .visual .inner:hover .slogan .btn {
     opacity: 1;
     transition-delay: 1.6s;
+}
+
+/* NOTICE */
+.notice .notice_line {
+    position: relative;
+}
+
+.notice .notice_line .bg_left {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #111111;
+}
+
+.notice .notice_line .bg_right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #f6f5ef;
+}
+
+.notice .notice_line .inner {
+    height: 62px;
+    display: flex;
+}
+
+.notice .notice_line .inner .inner__left {
+    position: relative;
+    display: flex;
+    width: 60%;
+    height: 100%;
+    background-color: #111111;
+    align-items: center;
+    color: white;
+}
+
+.notice .notice_line .inner .inner__left h1 {
+    position: absolute;
+    font-weight: bold;
+    left: 0;
+}
+
+.notice .notice_line .inner .inner__left .swiper_container {
+    position: absolute;
+    left: 80px;
+    flex-grow: 1;
+    font-size: 14px;
+}
+
+.notice .notice_line .inner .inner__left a {
+    position: absolute;
+    right: 20px;
+    color: white;
+}
+
+.notice .notice_line .inner .inner__left a span {
+    font-size: 36px;
+    vertical-align: bottom; /* span태그는 글자요소이기 때문에 속성을 바꿔야 한다 */
+}
+
+.notice .notice_line .inner .inner__right {
+    position: relative;
+    display: flex;
+    width: 40%;
+    height: 100%;
+    background-color: #f6f5ef;
+    align-items: center;
+    color: #111111;
+}
+
+.notice .notice_line .inner .inner__right a {
+    position: absolute;
+    display: block;
+    left: 100px;
+    color: #111111;
+    line-height: 36px;
+}
+
+.notice .notice_line .inner .inner__right a span {
+    margin-left: 50px;
+    font-size: 36px;
+    vertical-align: bottom;
+}
+
+/* REWARDS */
+.rewards {
+    background-color: #1e3932;
+}
+
+.rewards .inner {
+    padding: 30px 0 40px 0;
+    display: flex;
+    gap: 20px;
+}
+
+.rewards .inner>a>img {
+    display: block;
+    width: 176px;
+}
+
+.rewards .inner .rewards__items {
+    flex-grow: 1;
+}
+
+.rewards .inner .rewards__items .rewards__items__register {
+    position: relative;
+    padding-bottom: 12px;
+    box-shadow: 0 0.5px #c8c8c8;
+    /* box-shadow 속성은 1px 단위 밑 설정이 가능하다 */
+}
+
+.rewards .inner .rewards__items .rewards__items__register p {
+    display: block;
+    font-size: 17px;
+    color: white;
+}
+
+.rewards .inner .rewards__items .rewards__items__register p.subject {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.rewards .inner .rewards__items .rewards__items__register .buttons {
+    position: absolute;
+    right: 0;
+    bottom: 12px;
+}
+
+.rewards .inner .rewards__items .rewards__items__card {
+    position: relative;
+    padding-top: 20px;
+}
+
+.rewards .inner .rewards__items .rewards__items__card p {
+    font-size: 14px;
+    color: white;
+}
+
+.rewards .inner .rewards__items .rewards__items__card .buttons {
+    position: absolute;
+    right: 0;
+    top: 20px;
+}
+
+/* peru */
+.peru {
+    position: relative;
+    background-image: url("../images/peru_bg.jpg");
+    height: 500px;
+    overflow: hidden;
+}
+
+.peru::before {
+    position: absolute;
+    display: block;
+    content: "";
+    /* 컨텐츠는 필수 */
+    background-image: url("../images/peru_bg_left.png");
+    left: 0;
+    bottom: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 350px;
+    height: 350px;
+}
+
+.peru::after {
+    position: absolute;
+    display: block;
+    content: "";
+    /* 컨텐츠는 필수 */
+    background-image: url("../images/peru_bg_right.png");
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 330px;
+    height: 330px;
+}
+
+.peru .inner .img_product {
+    position: absolute;
+    display: block;
+    width: 250px;
+    top: 140px;
+    left: 270px;
+    transform: translate(-500px, 0);
+    transition: 2.5s;
+    opacity: 0;
+}
+
+.peru:hover .inner .img_product {
+    transform: translate(0px, 0);
+    opacity: 1;
+}
+
+.peru .inner .peru__contents {
+    position: absolute;
+    top: 200px;
+    right: 100px;
+    transform: translate(500px, 0);
+    transition: 2.5s;
+    opacity: 0;
+}
+
+.peru:hover .inner .peru__contents {
+    transform: translate(0px, 0);
+    opacity: 1;
+}
+
+
+.peru .inner .peru__contents>img {
+    width: 427px;
+}
+
+.peru .inner .peru__contents .btn {
+    display: block;
+    width: 125px;
+    margin-top: 40px;
+}
+
+/* INDONESIA */
+.indonesia {
+    position: relative;
+    background-image: url("../images/indonesia_bg.jpg");
+    height: 400px;
+    overflow: hidden;
+}
+
+.indonesia::before {
+    position: absolute;
+    display: block;
+    content: "";
+    /* 컨텐츠는 필수 */
+    background-image: url("../images/indonesia_bg_left.png");
+    left: -180px;
+    bottom: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 370px;
+    height: 277px;
+}
+
+.indonesia::after {
+    position: absolute;
+    display: block;
+    content: "";
+    /* 컨텐츠는 필수 */
+    background-image: url("../images/indonesia_bg_right.png");
+    right: -400px;
+    bottom: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 560px;
+    height: 300px;
+}
+
+.indonesia .inner .indonesia_img {
+    position: absolute;
+    left: -380px;
+}
+
+.indonesia .inner .indonesia_title {
+    position: absolute;
+    top: 115px;
+    
+}
+
+.indonesia .inner .btn {
+    position: absolute;
+    display: block;
+    width: 125px;
+    left: 250px;
+    top: 280px;    
+}
+
+/* FAVORITE */
+.favorite {
+    background-image: url("../images/fav_bg.jpg");
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    overflow: hidden;
+    height: 800px;
+}
+
+.favorite .inner .fav_title1 {
+    position: absolute;
+    top: 120px;
+    left: 110px;
+    transform: translate(-500px, 0);
+    opacity: 0;
+}
+
+.favorite:hover .inner .fav_title1 {
+    transition: 2.5s;
+    transform: translate(0px, 0);
+    opacity: 1;
+}
+
+.favorite .inner .fav_title2 {
+    position: absolute;
+    top: 370px;
+    transform: translate(-500px, 0);
+    opacity: 0;
+}
+
+.favorite:hover .inner .fav_title2 {
+    transition: 4s;
+    transform: translate(0px ,0);
+    opacity: 1;
+}
+
+.favorite .inner .fav_img {
+    position: absolute;
+    top: 100px;
+    right: -120px;
+}
+
+.favorite .inner .btn {
+    position: absolute;
+    top: 570px;
+    left: 230px;
+    opacity: 0;
+}
+
+.favorite:hover .inner .btn {
+    opacity: 1;
+}
+
+/* MAGAZINE */
+.magazine {
+    background-image: url("../images/magazine_bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px;
+    overflow: hidden;
+}
+
+.magazine .inner .magazine_img {
+    position: absolute;
+    right: 100px;
+    transition: 2s;
+    opacity: 0;
+}
+
+.magazine:hover .inner .magazine_img {
+    opacity: 1;
+}
+
+.magazine .inner .magazine_title {
+    position: absolute;
+    top: 135px;
+    opacity: 1;
+}
+
+.magazine .inner .btn {
+    position: absolute;
+    top: 250px;
+    left: 300px;
+}
+
+/* STORE */
+.store {
+    background-image: url("../images/store_bg.jpg");
+    height: 400px;
+    overflow: hidden;
+}
+
+.store .inner .store_img1 {
+    position: absolute;
+    left: 290px;
+    top: 149px;
+    z-index: 1;
+}
+
+.store .inner .store_img2 {
+    position: absolute;
+    left: 60px;
+}
+
+.store .inner .store_img3 {
+    position: absolute;
+    top: -60px;
+    left: 420px;
+}
+
+.store .inner .store_img4 {
+    position: absolute;
+    top: 298px;
+    right: -50px;
+}
+
+.store .inner .store_title1 {
+    position: absolute;
+    top: 100px;
+    right: 50px;
+    opacity: 0;
+    transform: translate(500px, 0);
+}
+
+.store:hover .inner .store_title1 {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: 2s;
+}
+
+.store .inner .store_title2 {
+    position: absolute;
+    top: 168px;
+    right: 68px;
+    opacity: 0;
+    transform: translate(500px, 0);
+}
+
+.store:hover .inner .store_title2 {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: 3s;
+}
+
+.store .inner .btn {
+    position: absolute;
+    top: 270px;
+    right: 320px;
+    opacity: 0;
+    transform: translate(500px, 0);
+}
+
+.store:hover .inner .btn {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: 4s;
+}
+
+/* FOOTER */
+footer .footer_menu {
+    position: relative;
+    display: flex;
+    background-color :#2c2a29;
+}
+
+footer .footer_menu .item {
+    display: block;
+    padding: 32px 0 35px 0;
+    margin-left: 100px;
+}
+
+footer .footer_menu .item>li>a {
+    display: block;
+    color: white;
+    margin: 20px 0 20px 0;
+    font-size: 14px;
+}
+
+footer .footer_menu .item>li>a:hover {
+    text-decoration: underline;
+}
+
+footer .footer_menu .item>li>ul>li>a {
+    color: white;
+    font-size: 14px;
+}
+
+footer .footer_menu .footer_logo {
+   position: absolute;
+   right: 100px;
+   top: 50px;
+}
+
+footer .footer_submenu {
+    background-color: #2c2a29;
+}
+
+footer .footer_submenu .item {
+    display: flex;
+    justify-content: center;
+}
+
+footer .footer_submenu .item>li>a {
+    color: white;
+    font-size: 12px;
+}
+
+footer .footer_submenu .item>li>a:hover {
+    text-decoration: underline;
+}
+
+footer .footer_submenu .item>li>a::after {
+    content: "|";
+    color: #c8c8c8;
+    font-size: 12px;
+    padding: 10px;
+}
+
+.footer_btn {
+    display: flex;
+    background-color: #2c2a29;
+    justify-content: center;
+    padding: 20px;
+}
+
+.footer_btn>a {
+    margin: 0 5px;
 }
