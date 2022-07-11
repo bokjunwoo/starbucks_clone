@@ -894,7 +894,7 @@ footer .footer_submenu .item>li>a:hover {
     text-decoration: underline;
 }
 
-footer .footer_submenu .item>li>a::after {
+footer .footer_submenu .item > li:not(:last-child) > a::after {
     content: "|";
     color: #c8c8c8;
     font-size: 12px;
