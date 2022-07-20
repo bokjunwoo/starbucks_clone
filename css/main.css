@@ -118,7 +118,7 @@ header {
     border-bottom: 1px solid #c8c8c8;
     width: 100%;
     top: 0;
-    z-index: 1;
+    z-index: 999;
 }
 
 header>.inner {
@@ -173,11 +173,11 @@ header .inner .sub_menu .menu li:not(:last-child)::after {
 
 /* SEARCH */
 header .inner .menu .search input {
-    width: 40px;
+    width: 34px;
     height: 34px;
     margin: 3px 0 0 15px;
-    transition: width 0.4s;
-    font-size: 16px;
+    transition: 0.4s;
+    font-size: 12px;
     padding: 0 10px;
     border: 1px solid #ccc;
     border-radius: 3px;
@@ -190,17 +190,13 @@ header .inner .menu .search input:focus {
     outline-color: green;
 }
 
-header .inner .menu .search input:active {
-    outline-color: blue;
-}
-
 header .inner .menu .search span {
     position: absolute;
     font-size: 24px;
     height: 24px;
     top: 0;
     bottom: 0;
-    right: 3px;
+    right: 4px;
     margin: auto;
 }
 
@@ -215,6 +211,7 @@ header .inner .main_menu {
 header .inner .main_menu .item .item__name {
     padding: 10px 20px 34px 20px;
     font-size: 13px;
+    
 }
 
 header .inner .main_menu .item:hover .item__name {
@@ -334,11 +331,11 @@ header .badges {
     border: 2px solid #1c3831;
     border-radius: 5px;
     width: 129px;
-    height: 100%;
+    height: 45px;
     box-sizing: border-box;
     color: #1c3831;
     font-size: 15px;
-    line-height: 34px;
+    line-height: 26px;
     text-align: center;
     margin-top: 30px;
     transition: 0.4s;
@@ -380,25 +377,25 @@ header .badges {
 }
 
 /* 애니메이션 효과 */
-.visual .inner:hover .slogan {
+.visual .inner.visual_scroll .slogan {
     opacity: 1;
 }
-.visual .inner:hover .image.item_1 {
+.visual .inner.visual_scroll .image.item_1 {
     opacity: 1;
     transition-delay: 0.4s;
 }
 
-.visual .inner:hover .image.item_2 {
+.visual .inner.visual_scroll .image.item_2 {
     opacity: 1;
     transition-delay: 0.8s;
 }
 
-.visual .inner:hover .image.item_3 {
+.visual .inner.visual_scroll .image.item_3 {
     opacity: 1;
     transition-delay: 1.2s;
 }
 
-.visual .inner:hover .slogan .btn {
+.visual .inner.visual_scroll .slogan .btn {
     opacity: 1;
     transition-delay: 1.6s;
 }
@@ -436,7 +433,7 @@ header .badges {
 .notice .notice_line .inner .inner__left {
     position: relative;
     display: flex;
-    width: 60%;
+    width: 50%;
     height: 100%;
     background-color: #111111;
     align-items: center;
@@ -449,11 +446,16 @@ header .badges {
     left: 0;
 }
 
-.notice .notice_line .inner .inner__left .swiper_container {
+.notice .notice_line .inner .inner__left .swiper {
     position: absolute;
     left: 80px;
     flex-grow: 1;
     font-size: 14px;
+    height: 62px;
+}
+
+.notice .notice_line .inner .inner__left .swiper .swiper-slide {
+    line-height: 62px;
 }
 
 .notice .notice_line .inner .inner__left a {
@@ -470,7 +472,7 @@ header .badges {
 .notice .notice_line .inner .inner__right {
     position: relative;
     display: flex;
-    width: 40%;
+    width: 50%;
     height: 100%;
     background-color: #f6f5ef;
     align-items: center;
@@ -489,6 +491,100 @@ header .badges {
     margin-left: 50px;
     font-size: 36px;
     vertical-align: bottom;
+}
+
+.notice .notice_line .inner .inner__right .toggle_promotion {
+    transition: 0.4s;
+}
+
+/* PROMOTION */
+.notice .promotion {
+    position: relative;
+    height: 659px;
+    background-color: #f6f5ef;
+    overflow: hidden;
+    transition: height 0.4s;
+}
+
+.notice .promotion.hide {
+    height: 0;
+}
+
+.notice .promotion .swiper {
+    height: 600px;
+    width: calc(819px * 3 + 20px);
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.notice .promotion .swiper .swiper-wrapper {}
+
+.notice .promotion .swiper .swiper-wrapper .swiper-slide {
+    opacity: 0.5;
+    transition: 0.2s;
+}
+
+.notice .promotion .swiper .swiper-wrapper .swiper-slide-active {
+    opacity: 1;
+}
+
+.notice .promotion .swiper .swiper-wrapper .swiper-slide .btn {
+    position: absolute;
+    width: 130px;
+    left: 0;
+    right: 0;
+    bottom: 50px;
+    margin: auto;
+    text-align: center;
+}
+
+.notice .promotion .swiper .swiper-pagination {
+    position: absolute;
+    bottom: 0;
+}
+
+.notice .promotion .swiper .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+}
+
+.notice .promotion .swiper .swiper-pagination-bullet-active {
+    /* background-image: url("../images/promotion_on.png");
+    background-size: cover;
+    background-color: transparent; 투명하게 */
+    background-color: white;
+    border: 3px solid #00704a;
+    box-sizing: border-box;
+}
+
+.notice .promotion .swiper .swiper-button-prev,
+.notice .promotion .swiper .swiper-button-next {
+    width: 55px;
+    height: 55px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    position: absolute;
+    top: 250px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.notice .promotion .swiper .swiper-button-prev::after,
+.notice .promotion .swiper .swiper-button-next::after {
+    font-size: 25px;
+    color: #333;
+}
+
+.notice .promotion .swiper .swiper-button-prev {
+    left: 50%;
+    transform: translate(-520px , 0);
+}
+
+.notice .promotion .swiper .swiper-button-next {
+    right: 50%;
+    transform: translate(520px, 0);
 }
 
 /* REWARDS */
@@ -594,12 +690,13 @@ header .badges {
     top: 140px;
     left: 270px;
     transform: translate(-500px, 0);
-    transition: 2.5s;
     opacity: 0;
+    z-index: 1;
 }
 
-.peru:hover .inner .img_product {
+.peru.peru_scroll .inner .img_product {
     transform: translate(0px, 0);
+    transition: 2s;
     opacity: 1;
 }
 
@@ -608,12 +705,13 @@ header .badges {
     top: 200px;
     right: 100px;
     transform: translate(500px, 0);
-    transition: 2.5s;
     opacity: 0;
+    z-index: 1;
 }
 
-.peru:hover .inner .peru__contents {
+.peru.peru_scroll .inner .peru__contents {
     transform: translate(0px, 0);
+    transition: 2s;
     opacity: 1;
 }
 
@@ -667,6 +765,12 @@ header .badges {
 .indonesia .inner .indonesia_img {
     position: absolute;
     left: -380px;
+    opacity: 0;
+}
+
+.indonesia.indonesia_scroll .inner .indonesia_img {
+    opacity: 1;
+    transition: 2s;
 }
 
 .indonesia .inner .indonesia_title {
@@ -700,7 +804,7 @@ header .badges {
     opacity: 0;
 }
 
-.favorite:hover .inner .fav_title1 {
+.favorite.favorite_scroll .inner .fav_title1 {
     transition: 2.5s;
     transform: translate(0px, 0);
     opacity: 1;
@@ -713,7 +817,7 @@ header .badges {
     opacity: 0;
 }
 
-.favorite:hover .inner .fav_title2 {
+.favorite.favorite_scroll .inner .fav_title2 {
     transition: 4s;
     transform: translate(0px ,0);
     opacity: 1;
@@ -732,8 +836,9 @@ header .badges {
     opacity: 0;
 }
 
-.favorite:hover .inner .btn {
+.favorite.favorite_scroll .inner .btn {
     opacity: 1;
+    transition: 2s;
 }
 
 /* MAGAZINE */
@@ -748,12 +853,12 @@ header .badges {
 .magazine .inner .magazine_img {
     position: absolute;
     right: 100px;
-    transition: 2s;
     opacity: 0;
 }
 
-.magazine:hover .inner .magazine_img {
+.magazine.magazine_scroll .inner .magazine_img {
     opacity: 1;
+    transition: 2s;
 }
 
 .magazine .inner .magazine_title {
@@ -807,7 +912,7 @@ header .badges {
     transform: translate(500px, 0);
 }
 
-.store:hover .inner .store_title1 {
+.store.store_scroll .inner .store_title1 {
     opacity: 1;
     transform: translate(0, 0);
     transition: 2s;
@@ -821,7 +926,7 @@ header .badges {
     transform: translate(500px, 0);
 }
 
-.store:hover .inner .store_title2 {
+.store.store_scroll .inner .store_title2 {
     opacity: 1;
     transform: translate(0, 0);
     transition: 3s;
@@ -835,7 +940,7 @@ header .badges {
     transform: translate(500px, 0);
 }
 
-.store:hover .inner .btn {
+.store.store_scroll .inner .btn {
     opacity: 1;
     transform: translate(0, 0);
     transition: 4s;
