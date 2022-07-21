@@ -238,6 +238,11 @@ header .inner .main_menu .item .item__contents__menu {
     padding: 20px 0;
 }
 
+/* 내려오는 애니메이션 
+.item__contents.animate__animated.animate__fadeInDown {
+    height: 120px;
+} */
+
 /* DROP DOWN */
 header .inner .main_menu .item .item__contents .item__contents__menu .inner {
     display: flex;
@@ -585,6 +590,16 @@ header .badges {
 .notice .promotion .swiper .swiper-button-next {
     right: 50%;
     transform: translate(520px, 0);
+}
+
+.promotion .change_icon {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    bottom: 19px;
+    left: 660px;
+    z-index: 1;
+    opacity: 0.5;
 }
 
 /* REWARDS */

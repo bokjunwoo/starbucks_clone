@@ -46,7 +46,10 @@
     <!-- main css -->
     <link rel="stylesheet" href="./css/main.css">
     <script defer src="./js/main.js"></script>
+    
+    <!-- cdn -->
     <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
 </head>
 
@@ -76,7 +79,7 @@
             <ul class="main_menu">
                 <li class="item">
                     <div class="item__name">COFFEE</div>
-                    <div class="item__contents">
+                    <div class="item__contents animate__animated animate__fadeInDown">
                         <div class="item__contents__menu">
                             <ul class="inner">
                                 <li>
@@ -462,7 +465,7 @@
                             <div class="swiper-slide">스타벅스 e-Gift Card 구매 가능 금액 안내</div>
                         </div>
                     </div>
-                    <a href="javascript:controlAutoplay();"> <!-- a태그에 사용하는 함수명 -->
+                    <a href="#"> 
                         <span class="material-symbols-outlined">add_circle</span>
                     </a>
                 </div>
@@ -496,6 +499,8 @@
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
             </div>
+            <a href="javascript:controlAutoplay();"><img src="./images/pause.png" alt="pause" class="change_icon"></a>
+            <!-- a태그에 사용하는 함수명 -->
         </div>
     </section>
 

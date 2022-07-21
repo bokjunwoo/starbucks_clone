@@ -47,12 +47,14 @@ const swiperPromotion = new Swiper(".promotion .swiper", {
     }
 })
 
-//PROMOTION AUTOPLAY CONTROL
+//PROMOTION AUTOPLAY CONTROL(프로모션 자동재생 멈추기, 이미지바꾸기)
 function controlAutoplay() {
     if(swiperPromotion.autoplay.running === true) {//running 돌아가는지 확인하는 변수명
         swiperPromotion.autoplay.stop();
+        document.querySelector(".change_icon").src = "./images/start.png";
     } else {
         swiperPromotion.autoplay.start();
+        document.querySelector(".change_icon").src = "./images/pause.png";
     }
 }
 
@@ -136,4 +138,4 @@ window.addEventListener("scroll", function() {
 
 // $(".inner .main_menu .item .item__contents").mouseover(function() {
 //     $(this).children(".inner .main_menu .item .item__contents").hover().slideDown(3000);
-// })
+// })animate__fadeInDown
