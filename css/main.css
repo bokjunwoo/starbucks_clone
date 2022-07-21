@@ -211,7 +211,6 @@ header .inner .main_menu {
 header .inner .main_menu .item .item__name {
     padding: 10px 20px 34px 20px;
     font-size: 13px;
-    
 }
 
 header .inner .main_menu .item:hover .item__name {
@@ -238,10 +237,10 @@ header .inner .main_menu .item .item__contents__menu {
     padding: 20px 0;
 }
 
-/* 내려오는 애니메이션 
-.item__contents.animate__animated.animate__fadeInDown {
+/* 내려오는 애니메이션  */
+.item__contents.animate__animated.animate__slideInDown {
     height: 120px;
-} */
+}
 
 /* DROP DOWN */
 header .inner .main_menu .item .item__contents .item__contents__menu .inner {
